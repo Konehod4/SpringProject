@@ -1,11 +1,8 @@
-package org.example.movierecommendersystem.lesson3;
+package org.example.movierecommendersystem.lesson5;
 
-import org.example.movierecommendersystem.lesson3.Filter;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component("CFA")
-
+@Component
 public class CollaborativeFilter implements Filter {
 
     public CollaborativeFilter() {

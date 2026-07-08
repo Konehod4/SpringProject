@@ -1,10 +1,9 @@
-package org.example.movierecommendersystem.lesson3;
+package org.example.movierecommendersystem.lesson5;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("CBFA")
-
+@Component
 public class ContentBasedFilter implements Filter {
     public ContentBasedFilter() {
     }
