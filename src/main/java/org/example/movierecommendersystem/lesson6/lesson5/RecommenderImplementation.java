@@ -1,4 +1,4 @@
-package org.example.movierecommendersystem.lesson5;
+package org.example.movierecommendersystem.lesson6.lesson5;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -9,9 +9,13 @@ public class RecommenderImplementation {
 
     private Filter filter;
 
-    public RecommenderImplementation(@Qualifier("contentBasedFilter") Filter filter) {
+    @Autowired
+    @Qualifier("collaborativeFilter")
+    public void setFilter(Filter filter) {
         this.filter = filter;
     }
+
+
 
     public String[] recommendMovies(String movie) {
 
