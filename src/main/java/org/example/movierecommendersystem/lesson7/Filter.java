@@ -1,4 +1,4 @@
-package org.example.movierecommendersystem.lesson6.lesson5;
+package org.example.movierecommendersystem.lesson7;
 
 public interface Filter {
     public String[] getRecommendations(String movie);
