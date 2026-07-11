@@ -2,7 +2,7 @@ package org.example.movierecommendersystem.lesson5;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("dd")
 public class CollaborativeFilter implements Filter {
 
     public CollaborativeFilter() {
