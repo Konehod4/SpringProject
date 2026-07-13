@@ -1,9 +1,10 @@
 package org.example.movierecommendersystem.lesson9;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.Arrays;
 
 @ComponentScan
 @Configuration
@@ -11,15 +12,15 @@ import org.springframework.context.annotation.Configuration;
 public class MovieRecommenderSystemApplication {
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MovieRecommenderSystemApplication.class);
 
-    Movie movie = applicationContext.getBean(Movie.class);
-System.out.println(movie);
+        ClassPathXmlApplicationContext classPathXmlApplicationContext = new ClassPathXmlApplicationContext("appContext.xml");
 
 
-      RecommenderImplementation recommenderImplementation = applicationContext.getBean(RecommenderImplementation.class);
-System.out.println(recommenderImplementation);
+        System.out.println(Arrays.toString(classPathXmlApplicationContext.getBeanDefinitionNames()));
 
+        RecommenderImplementation recommenderImplementation = classPathXmlApplicationContext.getBean(RecommenderImplementation.class);
+        System.out.println(recommenderImplementation);
+        classPathXmlApplicationContext.close();
 
     }
 
