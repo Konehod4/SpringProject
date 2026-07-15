@@ -12,7 +12,7 @@
 
     <bean id="recommenderImplementation"
           class="org.example.movierecommendersystem.lesson9.RecommenderImplementation">
-        <property name="filter" ref="collaborativeFilter"/>
+        <property name="collaborativeFilter" ref="collaborativeFilter"/>
     </bean>
 
 </beans>

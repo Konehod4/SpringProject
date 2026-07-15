@@ -1,4 +1,4 @@
-package org.example.movierecommendersystem.lesson8;
+package org.example.movierecommendersystem.lesson10;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-@Component("d")
+@Component
 public class CollaborativeFilter implements Filter {
 
 
